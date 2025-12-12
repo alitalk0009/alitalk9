@@ -501,15 +501,15 @@ async function fetchByCategory({ categoryId }) {
   //  .slice(Math.round(divided[2].length / 2), Math.round(divided[2].length ))
 
   // ---- divided[5]은 3개로 나눠서 배포
-  // .slice(0, Math.round(divided[5].length / 3));
+  // .slice(0, Math.round(divided[5].length / 3))
   // .slice(
   //   Math.round(divided[5].length / 3),
   //   2 * Math.round(divided[5].length / 3)
-  // );
-  // .slice(2 * Math.round(divided[5].length / 3), Math.round(divided[5].length));
+  // )
+  // .slice(2 * Math.round(divided[5].length / 3), Math.round(divided[5].length))
 
   const categoryRes = divided[5]
-    .slice(0, Math.round(divided[5].length / 3));
+    .slice(0, Math.round(divided[5].length / 3))
     .map((item) =>
       limit(async () => {
         const cat = await ProductCategories.findOne({
